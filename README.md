@@ -87,7 +87,7 @@ If you encounter any bugs or questions, please feel free to email me or open an 
 
 
 ## Acknowledgement
-Our codebase are inspired by several excellent open-sourced projects. We want to give special thanks to [bowdpr](https://github.com/ma787639046/bowdpr), [Tevatron](https://github.com/texttron/tevatron), [COCO-DR](https://github.com/OpenMatch/COCO-DR/tree/main#Usage), [Mistral-E5](https://github.com/microsoft/unilm/blob/master/e5/README.md), [FlagEmbedding](https://github.com/FlagOpen/FlagEmbedding), and so on.
+Our codebase are inspired by several excellent open-sourced projects. We want to give special thanks to [bowdpr](https://github.com/ma787639046/bowdpr), [Tevatron](https://github.com/texttron/tevatron), [COCO-DR](https://github.com/OpenMatch/COCO-DR/tree/main#Usage), [DoReMi](https://github.com/sangmichaelxie/doremi), [Mistral-E5](https://github.com/microsoft/unilm/blob/master/e5/README.md), [FlagEmbedding](https://github.com/FlagOpen/FlagEmbedding), and so on.
 
 
 ## Cite
