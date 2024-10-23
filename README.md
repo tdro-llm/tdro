@@ -10,7 +10,7 @@ This paper proposes a new task-level Distributionally Robust Optimization (tDRO)
 
 <div align=center>
     <img src="figs/llmemb_overview.png" width="50%">
-    <center>Task-level Distributionally Robust Optimization for Large Language Model-based Dense Retrieval</center>
+<!--     <center>Task-level Distributionally Robust Optimization for Large Language Model-based Dense Retrieval</center> -->
 </div>
 
 ## Environment Setup
@@ -38,7 +38,7 @@ A total of 25 heterogeneous retrieval fine-tuning datasets with **Hard Negatives
 3. **Category and Symmetry**: In order to enable the diversity of heterogeneous collections, the fine-tuning data covers *13 categories* and *2 symmetry*.
 4. **Format**: The format and source of training triples are also listed in the [Dataset Cards](data/README.md), which follows the basic format of (Query, Postive, Negatives).
 5. [**HN Mine**](data/HN_mine.md): All datasets have been processed with Hard Negative (HN) Mining. For 4 multilingual or Chinese datasets (MIRACL, Mr.Tydi, DuReader and T2Ranking), we directly use the originally provided HN. For MS-MARCO Passage Rankining, NQ and Trivia datasets, we follow the data preparation scripts provided with [bowdpr](https://github.com/ma787639046/bowdpr). For AllNLI and Quora duplicates triplets, we directly use the negatives from [Sentence Transformers Training Data](https://huggingface.co/datasets/sentence-transformers/embedding-training-data). For the remaining mono-lingual English datasets, we utilize the [bge-base-en-v1.5](https://huggingface.co/BAAI/bge-base-en-v1.5) retriever to mine the hard negatives. Please follow [`data/HN_mine.md`](data/HN_mine.md) to reproduce our *HN mine* pipeline.
-6. [**Deduplication**]((data/inspect_duplicates.py)): To avoid test label leak on the training collections, we deduplicate all training datasets with SimHash. Please refer to [`data/inspect_duplicates.py`](data/inspect_duplicates.py) for detailed deduplication implemention.
+6. [**Deduplication**](data/inspect_duplicates.py): To avoid test label leak on the training collections, we deduplicate all training datasets with SimHash. Please refer to [`data/inspect_duplicates.py`](data/inspect_duplicates.py) for detailed deduplication implemention.
 
 
 ## Training Procedure
