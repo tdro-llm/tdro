@@ -49,6 +49,14 @@ The whole training procedure for tDRO involves 3 stages.
 
 First, train a baseline model (which is also the reference model) with uniform weight sampling. Please refer to the above script to reproduce. The model will be saved in `results/s0_train_baseline_model` with the above script by default.
 
+**Note**: Our LLM-based retrievers rely on last token pooling, which requires add a `</eos>` at the end of tokenized texts. However, `Qwen1.5` & `LLaMA3` base models can NOT add a `</eos>` correctly when `tokenizer.add_eos_token==True`. 
+
+We have modified the `post_processor` in coresponding `tokenizer.json` to support add `</eos>`. Please use the modified tokenizer `tokenizer.json` in following files:
+
+1. **Qwen1.5**: [`scripts/qwen1.5-tokenizer.json`](scripts/qwen1.5-tokenizer.json)
+2. **LLaMA3**: [`scripts/llama3-8b-tokenizer.json`](scripts/llama3-8b-tokenizer.json)
+
+
 ### Stage 1: tDRO Optimization
 **Script**: [`s1_tdro.sh`](scripts/s1_tdro.sh)
 
