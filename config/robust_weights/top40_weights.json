@@ -1,0 +1,50 @@
+{
+    "domain_ids": {
+        "miracl": 0,
+        "medmcqa": 1,
+        "t2ranking": 2,
+        "nq": 3,
+        "eli5_question_answer": 4,
+        "yahoo_answers_title_answer": 5,
+        "msmarco": 6,
+        "trivia": 7,
+        "gooaq_pairs": 8,
+        "agnews": 9
+    },
+    "domain_weights": {
+        "miracl": 0.1,
+        "medmcqa": 0.1,
+        "t2ranking": 0.1,
+        "nq": 0.1,
+        "eli5_question_answer": 0.1,
+        "yahoo_answers_title_answer": 0.1,
+        "msmarco": 0.1,
+        "trivia": 0.1,
+        "gooaq_pairs": 0.1,
+        "agnews": 0.1
+    },
+    "size": {
+        "miracl": 32405,
+        "medmcqa": 160865,
+        "t2ranking": 200376,
+        "nq": 58800,
+        "eli5_question_answer": 325390,
+        "yahoo_answers_title_answer": 1198018,
+        "msmarco": 502854,
+        "trivia": 60370,
+        "gooaq_pairs": 3012347,
+        "agnews": 1157745
+    },
+    "epoch": {
+        "miracl": 20.704119734608856,
+        "medmcqa": 4.170683492369378,
+        "t2ranking": 3.348290214396934,
+        "nq": 11.41015306122449,
+        "eli5_question_answer": 2.0618857371154613,
+        "yahoo_answers_title_answer": 0.5600224704470217,
+        "msmarco": 1.334218282046081,
+        "trivia": 11.11341726022859,
+        "gooaq_pairs": 0.22272234905208463,
+        "agnews": 0.5795032584895637
+    }
+}

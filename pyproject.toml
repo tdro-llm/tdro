@@ -1,0 +1,47 @@
+[project]
+name = "tdro"
+version = "0.0.1"
+dependencies = [
+    "torch>=2.2.2",
+    "deepspeed>=0.14.1",
+    "transformers>=4.44.0",
+    "accelerate>=0.28.0",
+    "GradCache@git+https://github.com/ma787639046/GradCache",
+    "flash-attn>=2.5.6",
+    "datasets>=2.18.0",
+    "peft>=0.10.0",
+    # "faiss>=1.8.0",   # Faiss on pypi is out-of-date. Please build faiss-gpu from source / conda-forge.
+    "tqdm>=4.66.2",
+    "fire>=0.6.0",
+    "orjson>=3.10.0",
+    "jieba>=0.42.1",
+    "jionlp>=1.5.11",
+    "simhash>=2.1.2",
+    "pandas>=2.2.1",
+    "regex>=2023.12.25",
+    "tensorboard>=2.16.2",
+    "wandb>=0.16.5",
+    "tabulate>=0.9.0",
+    "openpyxl>=3.1.2",
+    "sentence_transformers>=2.6.1",
+    "mteb>=1.1.3.dev0",
+]
+requires-python = ">=3.11"
+authors = [
+  {name = "Guangyuan Ma", email = "Ma787639046@outlook.com"},
+]
+maintainers = [
+  {name = "Guangyuan Ma", email = "Ma787639046@outlook.com"},
+]
+description = "Scientific project for developing retrieval systems."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["LLM", "DRO"]
+classifiers = [
+  "Development Status :: 1 - Beta",
+  "Programming Language :: Python"
+]
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"

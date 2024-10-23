@@ -1,0 +1,38 @@
+{
+    "domain_ids": {
+        "miracl": 0,
+        "medmcqa": 1,
+        "t2ranking": 2,
+        "nq": 3,
+        "eli5_question_answer": 4,
+        "yahoo_answers_title_answer": 5,
+        "msmarco": 6
+    },
+    "domain_weights": {
+        "miracl": 0.14285714285714285,
+        "medmcqa": 0.14285714285714285,
+        "t2ranking": 0.14285714285714285,
+        "nq": 0.14285714285714285,
+        "eli5_question_answer": 0.14285714285714285,
+        "yahoo_answers_title_answer": 0.14285714285714285,
+        "msmarco": 0.14285714285714285
+    },
+    "size": {
+        "miracl": 32405,
+        "medmcqa": 160865,
+        "t2ranking": 200376,
+        "nq": 58800,
+        "eli5_question_answer": 325390,
+        "yahoo_answers_title_answer": 1198018,
+        "msmarco": 502854
+    },
+    "epoch": {
+        "miracl": 10.927361297859678,
+        "medmcqa": 2.2012317337963063,
+        "t2ranking": 1.7671834094758996,
+        "nq": 6.022128279883382,
+        "eli5_question_answer": 1.088236094708328,
+        "yahoo_answers_title_answer": 0.2955724729153843,
+        "msmarco": 0.7041828102334731
+    }
+}

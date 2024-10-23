@@ -1,0 +1,58 @@
+{
+    "domain_ids": {
+        "miracl": 0,
+        "medmcqa": 1,
+        "t2ranking": 2,
+        "nq": 3,
+        "eli5_question_answer": 4,
+        "yahoo_answers_title_answer": 5,
+        "msmarco": 6,
+        "trivia": 7,
+        "gooaq_pairs": 8,
+        "agnews": 9,
+        "stackexchange_duplicate_questions_title-body_title-body": 10,
+        "amazon_review_2018_1m": 11
+    },
+    "domain_weights": {
+        "miracl": 0.08333333333333333,
+        "medmcqa": 0.08333333333333333,
+        "t2ranking": 0.08333333333333333,
+        "nq": 0.08333333333333333,
+        "eli5_question_answer": 0.08333333333333333,
+        "yahoo_answers_title_answer": 0.08333333333333333,
+        "msmarco": 0.08333333333333333,
+        "trivia": 0.08333333333333333,
+        "gooaq_pairs": 0.08333333333333333,
+        "agnews": 0.08333333333333333,
+        "stackexchange_duplicate_questions_title-body_title-body": 0.08333333333333333,
+        "amazon_review_2018_1m": 0.08333333333333333
+    },
+    "size": {
+        "miracl": 32405,
+        "medmcqa": 160865,
+        "t2ranking": 200376,
+        "nq": 58800,
+        "eli5_question_answer": 325390,
+        "yahoo_answers_title_answer": 1198018,
+        "msmarco": 502854,
+        "trivia": 60370,
+        "gooaq_pairs": 3012347,
+        "agnews": 1157745,
+        "stackexchange_duplicate_questions_title-body_title-body": 250516,
+        "amazon_review_2018_1m": 999999
+    },
+    "epoch": {
+        "miracl": 20.469282003805993,
+        "medmcqa": 4.1233772625078995,
+        "t2ranking": 3.310312030050172,
+        "nq": 11.280732709750566,
+        "eli5_question_answer": 2.0384986733868073,
+        "yahoo_answers_title_answer": 0.5536703816915383,
+        "msmarco": 1.3190848304544327,
+        "trivia": 10.98736265253161,
+        "gooaq_pairs": 0.22019610733203487,
+        "agnews": 0.5729302077170131,
+        "stackexchange_duplicate_questions_title-body_title-body": 2.6477633497793884,
+        "amazon_review_2018_1m": 0.6633077466410799
+    }
+}
