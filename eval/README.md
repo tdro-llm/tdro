@@ -1,5 +1,6 @@
 # Evaluation
-This folder holds evaluation guidelines for BeIR, MIRACL and MKQA. Our evaluation pipeline is developed based on [Distributed RPC Framework](https://pytorch.org/docs/stable/rpc.html), which akins the pattern of [one producer - multiple consumers (workers)](https://en.wikipedia.org/wiki/Producer–consumer_problem) and naturally supports multi-node, multi-GPU encoding.
+This folder holds evaluation guidelines for BeIR, MIRACL and MKQA. Our evaluation pipeline is developed based on [Distributed RPC Framework](https://pytorch.org/docs/stable/rpc.html), which naturally supports multi-node, multi-GPU encoding.
+<!-- akins the pattern of [one producer - multiple consumers (workers)](https://en.wikipedia.org/wiki/Producer–consumer_problem) and  -->
 
 ## Data Preparation
 Please refer to scripts below for downloading the evaluation datasets.

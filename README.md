@@ -1,5 +1,5 @@
 # tDRO
-[![arxiv](https://img.shields.io/badge/arXiv-2404.05961-b31b1b.svg)](https://arxiv.org/abs/2408.10613)
+[![arxiv](https://img.shields.io/badge/arXiv-2408.10613-b31b1b.svg)](https://arxiv.org/abs/2408.10613)
 
 Source codes for research paper: 
 
@@ -23,20 +23,28 @@ pip install -e .
 
 
 ## Model Release
-All models and datasets will be released soon.
+
+| **Base Model**      | **Uniform Sampling Baselines**  | **tDRO: Dataset Selection Top-70%**     | **tDRO: Sample Ratio Reweighting**     |
+|---------------------|-----------------------------|-------------------------------|------------------------------|
+| **Qwen1.5-0.5B**    | [s0-baseline-Qwen1.5-0.5B](https://huggingface.co/tdro-llm/s0-baseline-Qwen1.5-0.5B)    | [s2-tdro-Qwen1.5-0.5B-top70](https://huggingface.co/tdro-llm/s2-tdro-Qwen1.5-0.5B-top70)    | [s2-tdro-Qwen1.5-0.5B-curr](https://huggingface.co/tdro-llm/s2-tdro-Qwen1.5-0.5B-curr)    |
+| **Qwen1.5-1.8B**    | [s0-baseline-Qwen1.5-1.8B](https://huggingface.co/tdro-llm/s0-baseline-Qwen1.5-1.8B)    | [s2-tdro-Qwen1.5-1.8B-top70](https://huggingface.co/tdro-llm/s2-tdro-Qwen1.5-1.8B-top70)    | [s2-tdro-Qwen1.5-1.8B-curr](https://huggingface.co/tdro-llm/s2-tdro-Qwen1.5-1.8B-curr)    |
+| **Qwen1.5-4B**      | [s0-baseline-Qwen1.5-4B](https://huggingface.co/tdro-llm/s0-baseline-Qwen1.5-4B)      | [s2-tdro-Qwen1.5-4B-top70](https://huggingface.co/tdro-llm/s2-tdro-Qwen1.5-4B-top70)      | [s2-tdro-Qwen1.5-4B-curr](https://huggingface.co/tdro-llm/s2-tdro-Qwen1.5-4B-curr)      |
+| **Qwen1.5-7B**      | [s0-baseline-Qwen1.5-7B](https://huggingface.co/tdro-llm/s0-baseline-Qwen1.5-7B)      | [s2-tdro-Qwen1.5-7B-top70](https://huggingface.co/tdro-llm/s2-tdro-Qwen1.5-7B-top70)      | [s2-tdro-Qwen1.5-7B-curr](https://huggingface.co/tdro-llm/s2-tdro-Qwen1.5-7B-curr)      |
+| **Mistral-7B-v0.1** | [s0-baseline-Mistral-7B-v0.1](https://huggingface.co/tdro-llm/s0-baseline-Mistral-7B-v0.1) | [s2-tdro-Mistral-7B-v0.1-top70](https://huggingface.co/tdro-llm/s2-tdro-Mistral-7B-v0.1-top70) | [s2-tdro-Mistral-7B-v0.1-curr](https://huggingface.co/tdro-llm/s2-tdro-Mistral-7B-v0.1-curr) |
+| **Llama-3-8B**      | [s0-baseline-Llama-3-8B](https://huggingface.co/tdro-llm/s0-baseline-Llama-3-8B)      | [s2-tdro-Llama-3-8B-top70](https://huggingface.co/tdro-llm/s2-tdro-Llama-3-8B-top70)      | [s2-tdro-Llama-3-8B-curr](https://huggingface.co/tdro-llm/s2-tdro-Llama-3-8B-curr)      |
 
 
 
 ## Data Preparation
 
-**Dataset Cards**: [data/README.md](data/README.md)
+**Dataset Release**: [tdro-llm/finetune_data](https://huggingface.co/datasets/tdro-llm/finetune_data)
 
-A total of 25 heterogeneous retrieval fine-tuning datasets with **Hard Negatives** and **Deduplication** (with test sets) are used as the fine-tuning collections of our experiments. Please refer to the above [Dataset Cards](data/README.md) for details.
+A total of 25 heterogeneous retrieval fine-tuning datasets with **Hard Negatives** and **Deduplication** (with test sets) are used as the fine-tuning collections of our experiments. Please refer to the above [Dataset Cards](https://huggingface.co/datasets/tdro-llm/finetune_data) for details.
 
-1. **Dataset sources**: All Datasets are made from open-sourced retrieval fine-tuning collections. Most of them (except several multilingual or Chinese datasets) are originated from [Sentence Transformers Training Data](https://huggingface.co/datasets/sentence-transformers/embedding-training-data). Please find their references at the *Reference* column of [Dataset Cards](data/README.md).
+1. **Dataset sources**: All Datasets are made from open-sourced retrieval fine-tuning collections. Most of them (except several multilingual or Chinese datasets) are originated from [Sentence Transformers Training Data](https://huggingface.co/datasets/sentence-transformers/embedding-training-data). Please find their references at the *Reference* column of [Dataset Cards](https://huggingface.co/datasets/tdro-llm/finetune_data).
 2. **Language**: *21 datasets* are mono-lingual English datasets. *2 datasets* (DuReader and T2Ranking) are mono-lingual Chinese datasets. And *2 datasets* (MIRACL and Mr.Tydi) are multilingual datasets.
 3. **Category and Symmetry**: In order to enable the diversity of heterogeneous collections, the fine-tuning data covers *13 categories* and *2 symmetry*.
-4. **Format**: The format and source of training triples are also listed in the [Dataset Cards](data/README.md), which follows the basic format of (Query, Postive, Negatives).
+4. **Format**: The format and source of training triples are also listed in the [Dataset Cards](https://huggingface.co/datasets/tdro-llm/finetune_data), which follows the basic format of (Query, Postive, Negatives).
 5. [**HN Mine**](data/HN_mine.md): All datasets have been processed with Hard Negative (HN) Mining. For 4 multilingual or Chinese datasets (MIRACL, Mr.Tydi, DuReader and T2Ranking), we directly use the originally provided HN. For MS-MARCO Passage Rankining, NQ and Trivia datasets, we follow the data preparation scripts provided with [bowdpr](https://github.com/ma787639046/bowdpr). For AllNLI and Quora duplicates triplets, we directly use the negatives from [Sentence Transformers Training Data](https://huggingface.co/datasets/sentence-transformers/embedding-training-data). For the remaining mono-lingual English datasets, we utilize the [bge-base-en-v1.5](https://huggingface.co/BAAI/bge-base-en-v1.5) retriever to mine the hard negatives. Please follow [`data/HN_mine.md`](data/HN_mine.md) to reproduce our *HN mine* pipeline.
 6. [**Deduplication**](data/inspect_duplicates.py): To avoid test label leak on the training collections, we deduplicate all training datasets with SimHash. Please refer to [`data/inspect_duplicates.py`](data/inspect_duplicates.py) for detailed deduplication implemention.
 
@@ -62,8 +70,8 @@ We have modified the `post_processor` in coresponding `tokenizer.json` to suppor
 
 Task-level Distributionally Robust Optimization (tDRO) optimizes over heterogeneous training collections to find robust weights for contrastive fine-tuning a retriever. This stage requires a proxy model (which interleaves its own update with weight updates) and a trained reference model (same size with the proxy model). After tDRO Optimization, several robust optimized weights are saved in the model output dictionary `results/s1_tdro` by default:
 
-1. `curr_weights.json`: The final weights at the last step of tDRO.
-2. `topxx_weights.json`: The top xx% tasks with a uniform sampling weights. In our paper, we take the `top70_weights.json` for optimal performances.
+1. `curr_weights.json`: Coresponding to **tDRO: Sample Ratio Reweighting** in the paper. The final weights at the last step of tDRO.
+2. `topxx_weights.json`: Coresponding to **tDRO: Dataset Selection Top-xx%** in the paper. The top xx% tasks with a uniform sampling weights. In our paper, we take the `top70_weights.json` for optimal performances.
 
 Additionally, the averaged weights `mean_weights.json` or EMA-averaged weights `ema_weights.json` over all tDRO steps are also provided for references. These two weights are not used in our experiments.
 
