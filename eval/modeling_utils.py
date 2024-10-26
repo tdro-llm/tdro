@@ -241,7 +241,7 @@ class ExactSearchModel:
             # HF Argument
             attn_implementation=args.attn_implementation,
             torch_dtype=args.dtype,
-            device_map="auto" if os.getenv("CUDA_VISIBLE_DEVICES") else target_device,
+            device_map=target_device,
         )
 
         # Compile model if PyTorch 2.x

@@ -38,13 +38,6 @@ logger = logging.getLogger(__name__)
 #         - Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
-# PeftModel.from_pretreined will occupy 600MiB * 8 processes GPU memory on Rank 0 only
-# if `CUDA_VISIBLE_DEVICES` is not set. However, AutoModel.from_pretrained won't. 
-# I don't know why this happens. 
-if local_rank := os.environ.get("LOCAL_RANK", None):
-    os.environ["CUDA_VISIBLE_DEVICES"] = str(local_rank)
-
-
 import torch
 import torch.nn as nn
 import torch.distributed.rpc as rpc
