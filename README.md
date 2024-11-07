@@ -1,4 +1,4 @@
-# tDRO
+# tDRO: Task-level Distributionally Robust Optimization for Large Language Model-based Dense Retrieval
 [![arxiv](https://img.shields.io/badge/arXiv-2408.10613-b31b1b.svg)](https://arxiv.org/abs/2408.10613)
 
 Source codes for research paper: 
