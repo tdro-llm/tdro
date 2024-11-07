@@ -116,6 +116,7 @@ def main(args: EvalArguments, model: nn.Module):
             previous_results=args.previous_results,
         )
 
+        del task_cls.corpus, task_cls.queries, task_cls.relevant_docs   # Fix MEM leaks
         del sub_eval
         del task_cls
 
